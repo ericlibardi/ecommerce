@@ -1,0 +1,17 @@
+$primary-color: rgb(65, 48, 48);
+$secondary-color: rgb(122, 122, 122);
+
+$primary-font: 'Spartan', sans-serif;
+
+@mixin displayflex ($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin displatflexcolumn ($justify, $align) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}

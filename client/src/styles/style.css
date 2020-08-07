@@ -1,0 +1,504 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navScrolled {
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(85, 84, 84, 0.829);
+          box-shadow: 0px 2px 5px 1px rgba(85, 84, 84, 0.829);
+  height: 58px;
+}
+
+.navStationary {
+  background-color: rgba(255, 255, 255, 0.397);
+  height: 70px;
+}
+
+#navbar {
+  padding: 0 60px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  -webkit-transition: all 1.3s;
+  transition: all 1.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbar div {
+  width: 33%;
+}
+
+#navbar img {
+  height: 50px;
+  text-align: center;
+}
+
+#navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+}
+
+#navbar ul #navbarShopGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbar li {
+  list-style-type: none;
+  padding: 4px;
+}
+
+#navbar li i {
+  font-size: 22px;
+  padding: 0 5px;
+  color: #413030;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#navbar a, #navbar p {
+  text-decoration: none;
+  color: #413030;
+  font-size: 18px;
+  position: relative;
+  display: inline;
+}
+
+#navbar a:after, #navbar p:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 0px;
+  height: 2px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
+  opacity: 0;
+  background-color: #413030;
+  left: 0;
+}
+
+#navbar a:hover, #navbar p:hover {
+  cursor: pointer;
+}
+
+#navbar a:hover:after, #navbar p:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+#navbar #navbarIcons i {
+  color: #413030;
+  font-size: 25px;
+  margin-right: 32px;
+  float: right;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+#navbar #navbarIcons i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+#navbarBottom {
+  width: 100%;
+  position: fixed;
+  top: 63px;
+  z-index: 100;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(85, 84, 84, 0.829);
+          box-shadow: 0px 2px 5px 1px rgba(85, 84, 84, 0.829);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbarBottom .navbarBottomImg {
+  width: 25%;
+  height: 100%;
+}
+
+.navbarBottomOpen {
+  background-color: white;
+  height: 30vh;
+}
+
+.navbarBottomClosed {
+  visibility: hidden;
+}
+
+#productsCompOverlay {
+  position: relative;
+}
+
+#productsCompOverlay form {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#productsCompOverlay:hover form {
+  display: inline-block;
+}
+
+#productsCompOverlay button {
+  background-color: #1e1616;
+  padding: 10px;
+  width: 100px;
+  color: #f7f7f7;
+  font-size: 14px;
+  border: none;
+}
+
+#productsCompOverlay img {
+  width: 100%;
+  padding: 0 10px;
+}
+
+#productsComponent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#productsComponent #productsComponentText {
+  margin: 10px;
+}
+
+#productsComponent #productsComponentText p {
+  margin: 4px;
+  text-align: center;
+}
+
+#header {
+  height: 90vh;
+  background-image: url("../images/coveringe.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #3a3a3a;
+}
+
+#header #headbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header button {
+  border: none;
+  width: 150px;
+  padding: 12px;
+  margin: 15px 20px 0 0;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  color: #3a3a3a;
+}
+
+#header button:hover {
+  background-color: #c7c7c7;
+}
+
+#header #contentHeader {
+  height: 100%;
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#belowHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 280px;
+  margin: 10px 40px;
+  padding: 0 30px;
+}
+
+#belowHeader p:first-of-type {
+  font-size: 30px;
+  width: 45%;
+}
+
+#belowHeader p:last-of-type {
+  font-size: 14px;
+  width: 45%;
+}
+
+#belowHeader p {
+  font-family: "Spartan", sans-serif;
+}
+
+#categoriesMozaic {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#categoriesMozaic #mozaic-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+}
+
+#categoriesMozaic #mozaic-left .mozaicbox1 {
+  height: 280px;
+  margin: 5px;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#categoriesMozaic #mozaic-left .mozaicbox1 img {
+  width: 140%;
+}
+
+#categoriesMozaic #mozaic-left .mozaicbox2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#categoriesMozaic #mozaic-left .mozaicbox2 .mozaicbox2Items {
+  width: 50%;
+  margin: 5px;
+  overflow: hidden;
+  height: 280px;
+  position: relative;
+}
+
+#categoriesMozaic #mozaic-left .mozaicbox2 .mozaicbox2Items img {
+  width: 100%;
+}
+
+#categoriesMozaic .mozaicbox3 {
+  width: 50%;
+  height: 570px;
+  margin: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+#categoriesMozaic .mozaicbox3 img {
+  width: 100%;
+}
+
+#categoriesMozaic img {
+  -webkit-transition-duration: 4s;
+          transition-duration: 4s;
+}
+
+#categoriesMozaic img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#categoriesMozaic .mozaiccontent {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+#categoriesMozaic .mozaiccontent h5, #categoriesMozaic .mozaiccontent p {
+  color: #7a7a7a;
+  mix-blend-mode: difference;
+}
+
+#categoriesMozaic .mozaiccontent button {
+  background-color: #1e1616;
+  padding: 10px;
+  width: 100px;
+  color: #f7f7f7;
+  font-size: 14px;
+  border: none;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+#categoriesMozaic .mozaiccontent button:hover {
+  opacity: 0.7;
+}
+
+#landClothesSection {
+  margin: 50px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#landClothesSection #landClothesTitle h4, #landClothesSection #landClothesTitle p {
+  font-family: "Spartan", sans-serif;
+  margin-top: 5px;
+  text-align: center;
+}
+
+#landClothesSection .landClothesGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 15px 0;
+}
+
+#aboutHeader {
+  height: 90vh;
+  background-image: url("../images/aboutcoverimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#aboutHeader h1 {
+  font-family: "Spartan", sans-serif;
+  color: #7a7a7a;
+}
+
+.aboutSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 80px;
+  padding: 0 30px;
+}
+
+.aboutSection img {
+  width: 47%;
+}
+
+.aboutSection .aboutSectionText {
+  width: 47%;
+  font-family: "Spartan", sans-serif;
+}

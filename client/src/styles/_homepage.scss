@@ -1,0 +1,129 @@
+#header {
+    height: 90vh;
+    background-image: url('../images/coveringe.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: darken($secondary-color, $amount: 25);
+    #headbutton {
+        @include displayflex (space-between, center);
+    }
+    button {
+        border: none;
+        width: 150px;
+        padding: 12px;
+        margin: 15px 20px 0 0;
+        transition-duration: 1s;
+        color: darken($secondary-color, $amount: 25);
+        &:hover {
+            background-color: lighten($secondary-color, $amount: 30);
+        } 
+    }
+    #contentHeader {
+        height: 100%;
+        margin-left: 5%;
+        @include displatflexcolumn (center, flex-start);
+    }
+}
+
+#belowHeader {
+    @include displayflex (space-between, center);
+    min-height: 280px;
+    margin: 10px 40px;
+    padding: 0 30px;
+    p:first-of-type {
+        font-size: 30px;
+        width: 45%;
+    }
+    p:last-of-type {
+        font-size: 14px;
+        width: 45%;
+    }
+    p {
+        font-family: $primary-font;
+    }
+}
+
+#categoriesMozaic {
+    padding: 5px;
+    @include displayflex (flex-start, flex-start);
+    #mozaic-left {
+        @include displatflexcolumn (center, flex-start);
+        width: 50%;
+        .mozaicbox1 {
+            height: 280px;
+            margin: 5px;
+            overflow: hidden;
+            position: relative;
+            @include displayflex (flex-end, flex-end);
+            img {
+                width: 140%;
+            }
+        }
+        .mozaicbox2 {
+            @include displayflex (flex-start, flex-start);
+            .mozaicbox2Items {
+                width: 50%;
+                margin: 5px;
+                overflow: hidden;
+                height: 280px;
+                position: relative;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .mozaicbox3 {
+        width: 50%;
+        height: 570px;
+        margin: 5px;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    img {
+        transition-duration: 4s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    .mozaiccontent {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        h5, p {
+            color: $secondary-color;
+            mix-blend-mode: difference
+        }
+        button {
+            background-color: darken($color: $primary-color, $amount: 12);
+            padding: 10px;
+            width: 100px;
+            color: rgb(247, 247, 247);
+            font-size: 14px;
+            border: none;
+            transition-duration: 1s;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
+#landClothesSection {
+    margin: 50px 20px;
+    @include displatflexcolumn (center, center);
+    #landClothesTitle {
+        h4, p {
+            font-family: $primary-font;
+            margin-top: 5px;
+            text-align: center;
+        };
+    }
+    .landClothesGroup {
+        @include displayflex (flex-start, flex-start);
+        margin: 15px 0;
+    }
+}
