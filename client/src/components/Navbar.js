@@ -21,7 +21,7 @@ export default class Navbar extends Component {
     }
 
     updateNavBar() {
-        var x = document.getElementById("navbar")
+        let x = document.getElementById("navbar")
         if (document.documentElement.scrollTop > 30 || this.state.navbarBottom === true) {
             x.className = "navScrolled"
         } else {
@@ -30,11 +30,11 @@ export default class Navbar extends Component {
     }
 
     openBottomNav () {
-        var navBarTop = document.getElementById("navbar")
+        let navBarTop = document.getElementById("navbar")
         const shopIcon = document.querySelector("i");
         const navbarBottom = document.getElementById("navbarBottom");
         
-        if (this.state.navbarBottom === false) {
+        if (!this.state.navbarBottom) {
         navBarTop.className = "navScrolled"
         navbarBottom.className = "navbarBottomOpen"
         shopIcon.style.transform = "rotate(180deg)"
@@ -76,22 +76,15 @@ export default class Navbar extends Component {
                     </div>
                 </div>
                 <div id="navbarBottom" className="navbarBottomClosed">
-                    <div className="navbarBottomImg">
-                        <img src={shirt}/>
-                        <p>Shirts</p>
+                    <div id="navbarBottomImg">
+                        <img src={shirt} alt="shirt" />
                     </div>
-                    <div className="navbarBottomImg">
-                        <img src={dress}/>
-                        <p>Dresses</p>
-                    </div>
-                    <div className="navbarBottomImg"> 
-                        <img src={pants}/>
-                        <p>Pants</p>
-                    </div>
-                    <div className="navbarBottomImg">
-                        <img src={tshirt} />
-                        <p>T-shirts</p>
-                    </div>
+                    <ul>
+                        <li><a href="/about">Shirts</a></li>
+                        <li><a href="/about">T-Shirts</a></li>
+                        <li><a href="/about">Dresses</a></li>
+                        <li><a href="/about">Pants</a></li>
+                    </ul>
                 </div>
             </div>
         )
