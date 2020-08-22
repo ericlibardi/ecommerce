@@ -225,20 +225,17 @@ body {
   position: relative;
 }
 
-#productsCompOverlay form {
+#productsCompOverlay:hover button {
+  display: inline-block;
+}
+
+#productsCompOverlay button {
   display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-#productsCompOverlay:hover form {
-  display: inline-block;
-}
-
-#productsCompOverlay button {
   background-color: #1e1616;
   padding: 10px;
   width: 100px;
@@ -275,6 +272,56 @@ body {
 #productsComponent #productsComponentText p {
   margin: 4px;
   text-align: center;
+}
+
+.moduleVisible {
+  display: inline-block;
+}
+
+.moduleInvisible {
+  display: none;
+}
+
+#overlayModule {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(10, 10, 10, 0.39);
+}
+
+#overlayModule #overlayBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transform: translate(15%, 5%);
+          transform: translate(15%, 5%);
+  background-color: #f7f7f7;
+  width: 75%;
+  height: 90%;
+  border-radius: 20px;
+}
+
+#overlayModule #overlayBlock i {
+  font-size: 20px;
+  margin: 5px;
+}
+
+#overlayModule #overlayHeader {
+  width: 45%;
+}
+
+#overlayModule #overlayCarousel {
+  width: 45%;
+  margin: 15px;
 }
 
 #header {

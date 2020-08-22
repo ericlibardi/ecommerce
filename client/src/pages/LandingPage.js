@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade';
 import Products from '../components/Products'
+import Modal from '../components/Overlay'
 
 import divider from '../images/curves.jpg'
 import tshirt from '../images/tshirtImg.jpg'
@@ -112,6 +113,7 @@ export default class LandingPage extends Component {
                         </div>
                     </div>
                 </div>
+                {<Modal></Modal>}
             </div>
         )
     }

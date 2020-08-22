@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 
 import Logo from '../images/cover.png'
-import tshirt from '../images/tshirtImg.jpg'
 import shirt from '../images/shirtImage.jpg'
-import dress from '../images/dressImg.jpg'
-import pants from '../images/pantsImg.jpg'
 
 export default class Navbar extends Component {
 
