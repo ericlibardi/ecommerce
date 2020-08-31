@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade';
+//import { Link } from 'react-router-dom'
+
+import PropTypes from 'prop-types'
+import { connect } from "react-redux";
 
 import aboutImg2 from '../images/aboutImg2.jpg'
 import aboutImg3 from '../images/aboutImg3.jpg'
 
-export default class AboutPage extends Component {
+class AboutPage extends Component {
     render() {
         return (
             <div>
@@ -36,3 +40,14 @@ export default class AboutPage extends Component {
         )
     }
 }
+
+AboutPage.propTypes = {
+    // userLogedin: PropTypes.func.isRequired,
+    // logoutUser: PropTypes.func.isRequired
+}
+
+const mapStateToProps = state => ({
+    //user: state.user.items
+})
+
+export default connect(mapStateToProps, {  })(AboutPage);

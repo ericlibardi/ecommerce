@@ -289,7 +289,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(10, 10, 10, 0.39);
 }
 
@@ -302,10 +301,10 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-transform: translate(15%, 5%);
-          transform: translate(15%, 5%);
+  -webkit-transform: translate(10%, 5%);
+          transform: translate(10%, 5%);
   background-color: #f7f7f7;
-  width: 75%;
+  width: 80%;
   height: 90%;
   border-radius: 20px;
 }
@@ -316,11 +315,108 @@ body {
 }
 
 #overlayModule #overlayHeader {
-  width: 45%;
+  width: 40%;
+  margin: 10px;
+}
+
+#overlayModule #overlayHeader #overlayHeaderFirst {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#overlayModule #overlayHeader #counter {
+  background-color: white;
+  width: 90px;
+  border: 1px solid #c7c7c7;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /* Firefox */
+}
+
+#overlayModule #overlayHeader #counter button {
+  width: 32px;
+  height: 35px;
+  font-size: 22px;
+  border: none;
+  background-color: white;
+}
+
+#overlayModule #overlayHeader #counter input {
+  width: 30px;
+  height: 35px;
+  border: none;
+  padding-left: 10px;
+}
+
+#overlayModule #overlayHeader #counter input::-webkit-outer-spin-button,
+#overlayModule #overlayHeader #counter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#overlayModule #overlayHeader #counter input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#overlayModule #overlayHeader #overlayButtons {
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#overlayModule #overlayHeader #overlayButtons button {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #c7c7c7;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+#overlayModule #overlayHeader #overlayButtons button:first-of-type {
+  background-color: white;
+}
+
+#overlayModule #overlayHeader #overlayButtons button:first-of-type:hover {
+  background-color: #eeeeee;
+}
+
+#overlayModule #overlayHeader #overlayButtons button:last-of-type {
+  margin-top: 20px;
+  background-color: #413030;
+  color: white;
+}
+
+#overlayModule #overlayHeader #overlayButtons button:last-of-type:hover {
+  background-color: #7c5b5b;
 }
 
 #overlayModule #overlayCarousel {
-  width: 45%;
+  width: 39%;
   margin: 15px;
 }
 

@@ -1,7 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
-import Products from '../components/Products'
-import Modal from '../components/Overlay'
+import Products from '../components/Products';
+import Modal from '../components/Overlay';
+
+import { Link } from 'react-router-dom';
+import { connect } from "react-redux";
+import PropTypes from 'prop-types';
 
 import divider from '../images/curves.jpg'
 import tshirt from '../images/tshirtImg.jpg'
@@ -10,7 +14,7 @@ import dress from '../images/dressImg.jpg'
 import pants from '../images/pantsImg.jpg'
 import square from '../images/squaregray.png'
 
-export default class LandingPage extends Component {
+class LandingPage extends Component {
      
     render() {
         return (
@@ -118,3 +122,16 @@ export default class LandingPage extends Component {
         )
     }
 }
+
+LandingPage.propTypes = {
+    // products: PropTypes.func.isRequired,
+    // userLogedin: PropTypes.func.isRequired,
+    // logoutUser: PropTypes.func.isRequired
+}
+
+const mapStateToProps = state => ({
+    // cities: state.cities.items,
+    // user: state.user.items
+})
+
+export default connect(mapStateToProps, {  })(LandingPage);
