@@ -1,4 +1,4 @@
-//import { POST_USER } from '../actions/actionTypes'
+import { FETCH_PRODUCTS } from '../actions/actionTypes'
 
 const initialState = {
     items: [],
@@ -7,12 +7,11 @@ const initialState = {
 
 export default function(state = initialState, action) {
     switch(action.type) {
-        // case POST_USER:
-        //     localStorage.setItem("token", action.payload.token)
-        //     return {
-        //         ...state,
-        //         items: action.payload
-        //     };
+        case FETCH_PRODUCTS:
+            return {
+                ...state,
+                items: action.payload
+            };
         default:
             return state;
         }

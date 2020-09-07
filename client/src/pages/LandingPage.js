@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 import PropTypes from 'prop-types';
 
+import { fetchProducts } from '../store/actions/productAction'
+
 import divider from '../images/curves.jpg'
 import tshirt from '../images/tshirtImg.jpg'
 import shirt from '../images/shirtImage.jpg'
@@ -15,6 +17,17 @@ import pants from '../images/pantsImg.jpg'
 import square from '../images/squaregray.png'
 
 class LandingPage extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        }
+    }
+
+    componentDidMount() {
+        this.props.fetchProducts();
+    }
      
     render() {
         return (
@@ -124,14 +137,14 @@ class LandingPage extends Component {
 }
 
 LandingPage.propTypes = {
-    // products: PropTypes.func.isRequired,
+    fetchProducts: PropTypes.func.isRequired,
     // userLogedin: PropTypes.func.isRequired,
     // logoutUser: PropTypes.func.isRequired
 }
 
 const mapStateToProps = state => ({
-    // cities: state.cities.items,
+    products: state.products.items,
     // user: state.user.items
 })
 
-export default connect(mapStateToProps, {  })(LandingPage);
+export default connect(mapStateToProps, { fetchProducts })(LandingPage);

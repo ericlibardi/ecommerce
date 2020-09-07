@@ -1,17 +1,40 @@
-const express = require ('express');
-const cors = require('cors');
-const bodyParser =  require('body-parser');
-const connectDB =  require('./config/db');
-
+const express = require("express");
 const app = express();
+const port = process.env.PORT || 5000;
+//const morgan = require('morgan');
+const db = require('./keys').mongoURI;
+const mongoose = require("mongoose");
 
-connectDB();
+mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true})
+    .then(() => console.log('Connection to Mongo DB established'))
+    .catch(err => console.log(err));
 
-app.use(express.json({extended: false}))
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(morgan('dev'));
+
 app.use(cors());
 
-app.get('/', (req, res) => res.send("API running"))
+app.use('/products', require('./routes/products'))
 
 
+//const passport = require('./passport');
 
-const PORT = process.env.PORT || 8080;
+//app.use(passport.initialize());
+
+app.listen(port, () => {
+  console.log("Server is running on " + port + "port");
+});
+
+
+//const connectDB =  require('./config/db');
+
+//connectDB();
+
+//app.use(express.json({extended: false}))
+
+//app.get('/', (req, res) => res.send("API running"))
