@@ -292,6 +292,14 @@ body {
   background-color: rgba(10, 10, 10, 0.39);
 }
 
+#overlayModule i {
+  color: #413030;
+}
+
+#overlayModule i:hover {
+  cursor: pointer;
+}
+
 #overlayModule #overlayBlock {
   display: -webkit-box;
   display: -ms-flexbox;

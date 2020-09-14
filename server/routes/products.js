@@ -4,6 +4,7 @@ const router = express.Router()
 
 router.get('/all',
     (req, res) => {
+        console.log('test')
         productModel.find({})
             .then(files => {
                 res.send(files)

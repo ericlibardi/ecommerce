@@ -8,7 +8,14 @@ import square from '../images/squaregray.png'
 export default class Overlay extends Component {
 
 
+constructor(props) {
+    super(props);
+    this.state = {
 
+    }
+    this.resetQuantityModule = this.resetQuantityModule.bind(this)
+}
+    
     
 componentDidMount() {
 
@@ -17,6 +24,9 @@ componentDidMount() {
             const overlay = document.getElementById("overlayModule");
             overlay.classList.toggle('moduleVisible');
             overlay.classList.toggle('moduleInvisible')
+            
+            const test = document.getElementById('counter').querySelector('input');
+            test.value = '1'
             }
         }
     
@@ -36,6 +46,17 @@ componentDidMount() {
         }    
     }
     
+    closeModule () {
+        const overlay = document.getElementById("overlayModule");
+        overlay.classList.toggle('moduleVisible');
+        overlay.classList.toggle('moduleInvisible');
+        this.resetQuantityModule();
+    }
+
+    resetQuantityModule () {
+        const test = document.getElementById('counter').querySelector('input');
+        test.value = '1'
+    }
 
 
     render() {
@@ -61,7 +82,7 @@ componentDidMount() {
                     <div id="overlayHeader">
                         <div id="overlayHeaderFirst">
                             <h4>Product Name</h4>
-                            <i className="fas fa-times"></i>
+                            <i onClick={() => this.closeModule()} className="fas fa-times"></i>
                         </div>
                         <p>$100,00</p>
                         <Form>
@@ -77,7 +98,7 @@ componentDidMount() {
                         </Form>
                         <div id="counter">
                             <button type="button" onClick={this.addRemoveQuantity.bind(this, '-')} data-count="-"> - </button> 
-                            <input type="number" min="1" max="10" />
+                            <input type="number" value="1" min="1" max="10" />
                             <button type="button" onClick={this.addRemoveQuantity.bind(this, '+')} data-count="+"> + </button> 
                         </div>
                         <div id="overlayButtons">

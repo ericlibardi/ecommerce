@@ -193,6 +193,12 @@
     height: 100%;
     //overflow: auto;
     background-color: rgba(10, 10, 10, 0.39);
+    i {
+        color: $primary-color;
+        &:hover {
+            cursor: pointer;
+        }
+    }
     #overlayBlock {
         @include displayflex (space-around, flex-start);
         transform: translate(10%, 5%);
