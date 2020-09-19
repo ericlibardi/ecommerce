@@ -3,13 +3,18 @@ import axios from 'axios';
 
 
 export const fetchProducts = () => async dispatch => {
-
-  const response = await axios.get('http://localhost:5000/products/all' )
   
-  dispatch({
-    type: FETCH_PRODUCTS,
-    payload: response.data
-  })
+  try {
+    const response = await axios.get('http://localhost:5000/products/all' )
+    
+    dispatch({
+      type: FETCH_PRODUCTS,
+      payload: response.data
+    })
+  }
+  catch (err) {
+    console.log(err)
+  }
 }
 
 // export const modifyComment = (comment, itinerary, action) => async dispatch => {
