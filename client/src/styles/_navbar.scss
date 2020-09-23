@@ -168,6 +168,7 @@
 
 #productsComponent {
     @include displatflexcolumn (center, center);
+    width: 33%;
     #productsComponentText {
         margin: 10px;
         p {

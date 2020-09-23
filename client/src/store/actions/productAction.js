@@ -6,7 +6,7 @@ export const fetchProducts = () => async dispatch => {
   
   try {
     const response = await axios.get('http://localhost:5000/products/all' )
-    
+    console.log(response.data)
     dispatch({
       type: FETCH_PRODUCTS,
       payload: response.data
