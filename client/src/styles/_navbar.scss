@@ -144,6 +144,7 @@
 
 #productsCompOverlay {
     position: relative;
+    width: 100%;
     &:hover button {
         display: inline-block;
     } 
@@ -162,13 +163,14 @@
     }
     img {
         width: 100%;
-        padding: 0 10px;
+        //padding: 0 7px;
     }
 }
 
 #productsComponent {
     @include displatflexcolumn (center, center);
-    width: 33%;
+    width: 25%;
+    margin: 0 7px;
     #productsComponentText {
         margin: 10px;
         p {

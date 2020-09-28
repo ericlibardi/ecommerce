@@ -124,16 +124,26 @@ class LandingPage extends Component {
                             }
                         </div>
                         <div className="landClothesGroup">
-                            <Products image={square} name="dress1" price="$100" className="productLandPage"/>   
-                            <Products image={square} name="dress1" price="$100" className="productLandPage"/>
-                            <Products image={square} name="dress1" price="$100" className="productLandPage"/>
-                            <Products image={square} name="dress1" price="$100" className="productLandPage"/>
+                            {this.props.products.filter((product)=>{
+                                return product.category === "Shirt"
+                            })
+                            .slice(0, 4)
+                            .map((product) => {
+                                const products = <Products image={product.image[0]} name={product.title} price={`€ ${product.price}`} className="productLandPage"/>
+                                return products
+                            })
+                            }
                         </div>
                         <div className="landClothesGroup">
-                            <Products image={square} name="dress1" price="$100" className="productLandPage"/>
-                            <Products image={square} name="dress1" price="$100" className="productLandPage"/>
-                            <Products image={square} name="dress1" price="$100" className="productLandPage"/>
-                            <Products image={square} name="dress1" price="$100" className="productLandPage"/>
+                            {this.props.products.filter((product)=>{
+                                return product.category === "Dress"
+                            })
+                            .slice(0, 4)
+                            .map((product) => {
+                                const products = <Products image={product.image[0]} name={product.title} price={`€ ${product.price}`} className="productLandPage"/>
+                                return products
+                            })
+                            }
                         </div>
                     </div>
                 </div>
